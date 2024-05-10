@@ -184,36 +184,41 @@ const EditBike: React.FC = () => {
                 onChange={handleInputChange}
               ></textarea>
             </div>
-
-            <div className="mb-3">
-              <label
-                htmlFor="photo"
-                className="mb-2 font-medium text-gray-700 "
-              >
-                Photo
-              </label>
-              <input
-                required
-                type="file"
-                className="w-[350px] px-2 py-1 ml-4 focus:outline-none focus:ring-1 focus:ring-blue-500"
-                id="photo"
-                name="photo"
-                onChange={handleImageChange}
-              />
+            <div className="flex flex-row">
+              <div className="mb-3">
+                <label
+                  htmlFor="photo"
+                  className="mb-2 font-medium text-gray-700 "
+                >
+                  Photo
+                </label>
+                <input
+                  required
+                  type="file"
+                  className="w-[350px] px-2 py-1 ml-4 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                  id="photo"
+                  name="photo"
+                  onChange={handleImageChange}
+                />
+              </div>
               {imagePreview && (
                 <div>
                   <img
-                    src={`data:image/jpeg;base64,${imagePreview}`}
+                    src={
+                      `data:image/jpeg;base64,${imagePreview}`
+                        ? `data:image/jpeg;base64,${imagePreview}`
+                        : `${imagePreview}`
+                    }
                     alt="Bike preview"
                     style={{ maxWidth: "400px", maxHeight: "400px" }}
                     className="mt-3"
                   />
-                  <img
+                  {/* <img
                     src={`${imagePreview}`}
                     alt="Bike preview"
                     style={{ maxWidth: "400px", maxHeight: "400px" }}
                     className="mt-3"
-                  />
+                  /> */}
                 </div>
               )}
             </div>

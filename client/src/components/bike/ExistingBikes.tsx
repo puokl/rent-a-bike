@@ -84,7 +84,7 @@ const ExistingBikes = () => {
 
   return (
     <>
-      <div className="container col-md-8 col-lg-6">
+      <div className="container col-md-8 col-lg-6 m-4">
         {successMessage && (
           <p className="p-4 text-green-800 bg-green-100 border border-green-400 rounded-md">
             {successMessage}
@@ -140,12 +140,12 @@ const ExistingBikes = () => {
               <tbody className="">
                 {currentRooms.map((bike) => (
                   <tr key={bike.id} className="text-center">
-                    <td>{bike.id}</td>
+                    <td className="p-3">{bike.id}</td>
                     <td>{bike.bikeType}</td>
                     <td>{bike.brand}</td>
                     <td>{bike.model}</td>
                     <td>{bike.bikePrice}</td>
-                    <td className="flex justify-center gap-6">
+                    <td className="flex justify-center gap-6 pt-3">
                       <div className="flex flex-row">
                         <Link
                           to={`/edit-bike/${bike.id}`}

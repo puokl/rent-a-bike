@@ -72,7 +72,7 @@ const BikeCarousel: React.FC = () => {
           fill="currentColor"
         >
           <path
-            fill-rule="evenodd"
+            fillRule="evenodd"
             d="M7.78 10.78a.75.75 0 0 1 0-1.06l3.47-3.47a.75.75 0 1 1 1.06 1.06L10.56 10l1.75 1.75a.75.75 0 1 1-1.06 1.06l-3.47-3.5a.75.75 0 0 1 0-1.06z"
           />
         </svg>
@@ -88,7 +88,7 @@ const BikeCarousel: React.FC = () => {
           fill="currentColor"
         >
           <path
-            fill-rule="evenodd"
+            fillRule="evenodd"
             d="M10.78 9.28a.75.75 0 0 1 1.06 0l3.47 3.47a.75.75 0 0 1 0 1.06l-3.47 3.47a.75.75 0 1 1-1.06-1.06l2.72-2.72-2.72-2.72a.75.75 0 0 1 0-1.06z"
           />
         </svg>
@@ -118,10 +118,11 @@ const BikeCarousel: React.FC = () => {
                   <h4>
                     {bike.brand} - {bike.model}
                   </h4>
-                  <p className="text-gray-700">${bike.bikePrice}/day</p>
+                  <p className="text-gray-700 mb-2">${bike.bikePrice}/day</p>
                   <Link
                     to={`/rent-bike/${bike.id}`}
-                    className="inline-block px-2 py-1 mt-2 text-white transition duration-300 bg-blue-500 rounded-md hover:bg-blue-600"
+                    // className="inline-block px-2 py-1 mt-2 text-white transition duration-300 bg-blue-500 rounded-md hover:bg-blue-600"
+                    className="w-1/3 px-2 py-1 mt-4 text-sm font-medium text-blue-600 border border-blue-600 rounded hover:bg-blue-100 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 "
                   >
                     Rent Now
                   </Link>

@@ -26,10 +26,10 @@ const Home: React.FC = () => {
       <div className="container mx-auto">
         <BikeCarousel />
         <BikeSearch />
-        <Parallax />
+        <Parallax imageUrl="1.jpg" />
         <BikeCarousel />
         <RentalService />
-        <Parallax />
+        <Parallax imageUrl="2.jpg" />
         <BikeCarousel />
       </div>
     </section>

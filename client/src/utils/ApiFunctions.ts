@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from "axios";
 
 export const api = axios.create({
-  baseURL: "http://localhost:9190",
+  baseURL: "http://localhost:3307",
 });
 
 export const getHeader = () => {
